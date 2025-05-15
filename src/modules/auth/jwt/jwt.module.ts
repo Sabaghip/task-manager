@@ -16,6 +16,7 @@ import { IEnvVars } from 'src/config/config.interface';
       }),
     }),
   ],
-  providers: []
+  providers: [],
+  exports: [Jwt]
 })
 export class JwtModule { }

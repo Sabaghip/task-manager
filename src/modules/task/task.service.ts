@@ -6,6 +6,7 @@ import { CreateTaskDto, UpdateTaskDto } from './dto/create.dto'
 import { IndexTaskDto } from './dto/index.dto'
 import { CategoryService } from '../category/category.service'
 import { CategoryBadReqMessage } from '../category/enum/categoryBadReqMessage.enum'
+import { NotificationService } from '../notification/notification.service'
 
 @Injectable()
 export class TaskService {
