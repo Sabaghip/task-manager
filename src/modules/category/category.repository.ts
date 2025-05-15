@@ -11,7 +11,6 @@ export class CategoryRepo {
     private readonly pagination: PaginationProvider
   ) { }
   async store(data: CreateCategoryType): Promise<Category> {
-    console.log(data)
     return await this.prisma.category.create({ data })
   }
 

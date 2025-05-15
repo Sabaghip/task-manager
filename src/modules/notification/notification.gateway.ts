@@ -7,7 +7,7 @@ import {
 import { JwtService } from '@nestjs/jwt';
 import { Server, Socket } from 'socket.io';
 import { ConfigService } from '@nestjs/config';
-import { IEnvVars } from 'src/config/config.interface';
+import { IEnvVars } from '../../config/config.interface';
 import { JwtPayload } from '../auth/type/jwt.payload';
 
 @WebSocketGateway({ cors: true })

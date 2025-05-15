@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule as Jwt } from '@nestjs/jwt'
-import { IEnvVars } from 'src/config/config.interface';
+import { IEnvVars } from '../../../config/config.interface';
 
 @Module({
   imports: [

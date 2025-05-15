@@ -3,10 +3,9 @@ import { BadRequestException, Injectable } from '@nestjs/common'
 import { UserRepo } from './user.repository'
 import { User } from '@prisma/client'
 import { CreateUserType, UpdateUserType } from './type/user.type'
-import { HashService } from 'src/shared/utils/hash/hash.service'
+import { HashService } from '../../shared/utils/hash/hash.service'
 import { IndexUserFilter } from './dto/indexUser.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
-import { UserDetails } from '../auth/type/auth.type'
 
 @Injectable()
 export class UserService {

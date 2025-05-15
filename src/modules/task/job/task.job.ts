@@ -1,7 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common'
 import { TaskRepo } from '../task.repository'
 import { Cron, CronExpression } from '@nestjs/schedule'
-import { NotificationService } from 'src/modules/notification/notification.service'
+import { NotificationService } from '../../../modules/notification/notification.service'
 import { TaskStatus } from '@prisma/client'
 
 @Injectable()

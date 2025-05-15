@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { IEnvVars } from 'src/config/config.interface';
+import { IEnvVars } from '../../../config/config.interface';
 import { JwtPayload } from '../type/jwt.payload';
 import { JwtService } from '@nestjs/jwt';
 
