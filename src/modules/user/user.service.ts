@@ -2,7 +2,7 @@ import { UserBadReqMessage } from './enum/userBadReqMessage.enum'
 import { BadRequestException, Injectable } from '@nestjs/common'
 import { UserRepo } from './user.repository'
 import { User } from '@prisma/client'
-import { CreateUserType } from './type/user.type'
+import { CreateUserType, UpdateUserType } from './type/user.type'
 import { HashService } from 'src/shared/utils/hash/hash.service'
 import { IndexUserFilter } from './dto/indexUser.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
@@ -43,6 +43,12 @@ export class UserService {
     return user
   }
 
+  async getProfile(id: string): Promise<User> {
+    const user = await this.findOne(id)
+    delete user.password
+    return user
+  }
+
   async findOnWhere(filter: Partial<User>): Promise<UserDetails | null> {
     return await this.userRepo.findOneWhere(filter)
   }
@@ -56,9 +62,25 @@ export class UserService {
     }
   }
 
-  async update(id: string, updateUserDto: UpdateUserDto): Promise<User> {
+  async update(id: string, updateUserDto: UpdateUserType): Promise<User> {
     await this.findOne(id)
+    if (updateUserDto.password) {
+      updateUserDto.password = await this.hashService.md5er(updateUserDto.password)
+    }
     return await this.userRepo.update(id, updateUserDto)
+  }
+
+  async updateByUser(id: User['id'], updateUserDto: UpdateUserDto): Promise<User> {
+    const user = await this.findOne(id)
+    if (updateUserDto.password) {
+      if (!updateUserDto.lastPassword || !(await this.hashService.verify(updateUserDto.lastPassword, user.password))) {
+        throw new BadRequestException(UserBadReqMessage.CURRENT_PASSWORD_IS_WRONG)
+      }
+    }
+    const { lastPassword, ...rest } = updateUserDto
+    const updatedUser = await this.update(id, rest)
+    delete updateUserDto.password
+    return updatedUser
   }
 
   async remove(id: string): Promise<User> {
