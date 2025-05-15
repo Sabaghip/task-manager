@@ -37,6 +37,7 @@ export class AuthService {
   async signup(signupDto: SignUpDto): Promise<UserDetails & { accessToken: string }> {
     const user = await this.userService.create(signupDto)
     const payload = this._generatePayload(user.id)
+    delete user.password
     return {
       ...user,
       accessToken: this.accessService.createAccessToken(payload)
