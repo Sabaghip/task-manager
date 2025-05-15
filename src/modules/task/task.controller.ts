@@ -18,7 +18,7 @@ export class TaskController {
     return this.taskService.updateByUser(user.sub, taskId, updateTaskDto)
   }
 
-  @Put(':id')
+  @Put(':id/status')
   changeStatus(
     @User() user: JwtPayload,
     @Param("id", new ParseUUIDPipe) taskId: string,
