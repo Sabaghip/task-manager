@@ -1,0 +1,1532 @@
+{
+	"info": {
+		"_postman_id": "a70a627b-ae27-4725-a409-eeb4900599de",
+		"name": "task-manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44905092"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "get users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/admin/user"
+							},
+							"response": [
+								{
+									"name": "get users",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "localhost:3000/api/v1/admin/user"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "917"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"395-jhSnE20D/CAE4F7tYL/+cIPTmOo\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 11:50:03 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n        \"email\": \"sabaghi.p2@gmail.com\",\n        \"fullName\": \"Parsa Sabaghi\",\n        \"mobile\": \"09111111112\",\n        \"password\": \"$2b$10$0VdU93CABZ43lOmvJf4NmO0jWLB3hsVDaWEJL3kU.V4xFtj5zbwMy\",\n        \"number\": 2,\n        \"isAdmin\": false,\n        \"createdAt\": \"2025-05-15T11:18:14.396Z\",\n        \"updatedAt\": \"2025-05-15T11:18:14.396Z\"\n    },\n    {\n        \"id\": \"21ae828a-40ee-4a20-a488-b23d08bf7522\",\n        \"email\": \"sabaghi.p3@gmail.com\",\n        \"fullName\": \"Parsa Sabaghi\",\n        \"mobile\": \"09111111122\",\n        \"password\": \"$2b$10$F9VEsevnax.U8CfqWPhDJeL/ZcQYhSmr9I03CHd1ogXJfj9y.Z0NO\",\n        \"number\": 3,\n        \"isAdmin\": false,\n        \"createdAt\": \"2025-05-15T11:20:15.025Z\",\n        \"updatedAt\": \"2025-05-15T11:20:15.025Z\"\n    },\n    {\n        \"id\": \"ad95fc14-94d0-4cc4-ae8a-edde9f7e1bb9\",\n        \"email\": \"sabaghi.p@gmail.com\",\n        \"fullName\": \"Parsa Sabaghi\",\n        \"mobile\": \"09111111111\",\n        \"password\": \"$2b$10$E/dcUZJx82u/vbrhLzqKsuyfrB5zeX/WiWj23anYjg9U3sZLYneZq\",\n        \"number\": 1,\n        \"isAdmin\": true,\n        \"createdAt\": \"2025-05-15T11:15:57.022Z\",\n        \"updatedAt\": \"2025-05-15T11:15:57.022Z\"\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "get user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/admin/user/21ae828a-40ee-4a20-a488-b23d08bf7522"
+							},
+							"response": [
+								{
+									"name": "get user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "localhost:3000/api/v1/admin/user/21ae828a-40ee-4a20-a488-b23d08bf7522"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "231"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"e7-r0Vmt0tVc+NXJzaccxsqXPtGMT0\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 11:52:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"21ae828a-40ee-4a20-a488-b23d08bf7522\",\n    \"email\": \"sabaghi.p3@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111122\",\n    \"number\": 3,\n    \"isAdmin\": false,\n    \"createdAt\": \"2025-05-15T11:20:15.025Z\",\n    \"updatedAt\": \"2025-05-15T11:20:15.025Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update a user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+									}
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/admin/user/21ae828a-40ee-4a20-a488-b23d08bf7522"
+							},
+							"response": [
+								{
+									"name": "Update a user",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"fullName\": \"updated\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "localhost:3000/api/v1/admin/user/21ae828a-40ee-4a20-a488-b23d08bf7522"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "209"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d1-16xQeU77vksmarxMEXAZPbnlI4w\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 11:59:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"21ae828a-40ee-4a20-a488-b23d08bf7522\",\n    \"email\": \"sabaghi.p3@gmail.com\",\n    \"fullName\": \"updated\",\n    \"mobile\": \"09111111122\",\n    \"number\": 3,\n    \"createdAt\": \"2025-05-15T11:20:15.025Z\",\n    \"updatedAt\": \"2025-05-15T11:59:45.876Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Create user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobile\": \"09111111113\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"sabaghi.p6@gmail.com\",\r\n    \"fullName\": \"Parsa Sabaghi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/admin/user/"
+							},
+							"response": [
+								{
+									"name": "Create user",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mobile\": \"09111111114\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"sabaghi.p7@gmail.com\",\r\n    \"fullName\": \"Parsa Sabaghi\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "localhost:3000/api/v1/admin/user/"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "215"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d7-1S/Bvg3LCcA9l7J6EskgWgwC4zc\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 12:00:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"9893c181-fd2f-4fe2-815f-756b243f4c59\",\n    \"email\": \"sabaghi.p7@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111114\",\n    \"number\": 5,\n    \"createdAt\": \"2025-05-15T12:00:09.695Z\",\n    \"updatedAt\": \"2025-05-15T12:00:09.695Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete user",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3000/api/v1/admin/user/21ae828a-40ee-4a20-a488-b23d08bf7522"
+							},
+							"response": [
+								{
+									"name": "Delete user",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "localhost:3000/api/v1/admin/user/9893c181-fd2f-4fe2-815f-756b243f4c59"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "215"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"d7-1S/Bvg3LCcA9l7J6EskgWgwC4zc\""
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 15 May 2025 12:02:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"9893c181-fd2f-4fe2-815f-756b243f4c59\",\n    \"email\": \"sabaghi.p7@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111114\",\n    \"number\": 5,\n    \"createdAt\": \"2025-05-15T12:00:09.695Z\",\n    \"updatedAt\": \"2025-05-15T12:00:09.695Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/user"
+					},
+					"response": [
+						{
+							"name": "Get Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-Dj3xYUTMGsNs0nZTRIQjRJ9mvcg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 11:45:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ad95fc14-94d0-4cc4-ae8a-edde9f7e1bb9\",\n    \"email\": \"sabaghi.p@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111111\",\n    \"number\": 1,\n    \"isAdmin\": false,\n    \"createdAt\": \"2025-05-15T11:15:57.022Z\",\n    \"updatedAt\": \"2025-05-15T11:15:57.022Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\": \"update22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/user"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\": \"update22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-aCN6qTLXpapvvtDOTubfohNV8W0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:06:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ad95fc14-94d0-4cc4-ae8a-edde9f7e1bb9\",\n    \"email\": \"sabaghi.p@gmail.com\",\n    \"fullName\": \"update22\",\n    \"mobile\": \"09111111111\",\n    \"number\": 1,\n    \"createdAt\": \"2025-05-15T11:15:57.022Z\",\n    \"updatedAt\": \"2025-05-15T12:06:00.375Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/api/v1/user"
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3000/api/v1/user"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-aCN6qTLXpapvvtDOTubfohNV8W0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:09:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ad95fc14-94d0-4cc4-ae8a-edde9f7e1bb9\",\n    \"email\": \"sabaghi.p@gmail.com\",\n    \"fullName\": \"update22\",\n    \"mobile\": \"09111111111\",\n    \"number\": 1,\n    \"createdAt\": \"2025-05-15T11:15:57.022Z\",\n    \"updatedAt\": \"2025-05-15T12:06:00.375Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sign up",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile\": \"09111111112\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"sabaghi.p2@gmail.com\",\r\n    \"fullName\": \"Parsa Sabaghi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/auth/signup"
+					},
+					"response": [
+						{
+							"name": "Sign up",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"mobile\": \"09111111122\",\r\n    \"password\": \"123456\",\r\n    \"email\": \"sabaghi.p3@gmail.com\",\r\n    \"fullName\": \"Parsa Sabaghi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/auth/signup"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "443"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1bb-PezHy1IzQvzM6Wv2cBIk3v8Qfe8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 11:20:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"21ae828a-40ee-4a20-a488-b23d08bf7522\",\n    \"email\": \"sabaghi.p3@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111122\",\n    \"number\": 3,\n    \"createdAt\": \"2025-05-15T11:20:15.025Z\",\n    \"updatedAt\": \"2025-05-15T11:20:15.025Z\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyMWFlODI4YS00MGVlLTRhMjAtYTQ4OC1iMjNkMDhiZjc1MjIiLCJuYmYiOjE3NDczMDgwMTAsImlhdCI6MTc0NzMwODAxNSwiZXhwIjoxNzQ3MzExNjE1fQ.o9m9k_EurH9uus--xNUg6iQNqrqwf7D2oDKJJOrV6Cc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"sabaghi.p@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"sabaghi.p@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/auth/login"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "442"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ba-y308NV3SFT7Rs9yF1nz4bxbJLDQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 11:21:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"ad95fc14-94d0-4cc4-ae8a-edde9f7e1bb9\",\n    \"email\": \"sabaghi.p@gmail.com\",\n    \"fullName\": \"Parsa Sabaghi\",\n    \"mobile\": \"09111111111\",\n    \"number\": 1,\n    \"createdAt\": \"2025-05-15T11:15:57.022Z\",\n    \"updatedAt\": \"2025-05-15T11:15:57.022Z\",\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZDk1ZmMxNC05NGQwLTRjYzQtYWU4YS1lZGRlOWY3ZTFiYjkiLCJuYmYiOjE3NDczMDgwOTAsImlhdCI6MTc0NzMwODA5NSwiZXhwIjoxNzQ3MzExNjk1fQ.EPj2sZa_RVtH9Lk1736ZPgtC3j7N6JtJIHsDrhrmITs\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/category"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/category"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-uXA53NLSKJxeh5ueKsBZlW5RM+o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:24:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f5ccc1f-035a-4982-9f86-96fe7f4dab83\",\n    \"title\": \"test\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"createdAt\": \"2025-05-15T12:24:17.712Z\",\n    \"updatedAt\": \"2025-05-15T12:24:17.712Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-69pFcBSvaYbDqyo6/ogfXU+qaDo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:35:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f5ccc1f-035a-4982-9f86-96fe7f4dab83\",\n    \"title\": \"test\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"createdAt\": \"2025-05-15T12:24:17.712Z\",\n    \"updatedAt\": \"2025-05-15T12:24:17.712Z\",\n    \"Tasks\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test222\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test222\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-HiI2I7WeFZtw1Thq9TV1uyyw1RI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:37:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f5ccc1f-035a-4982-9f86-96fe7f4dab83\",\n    \"title\": \"test222\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"createdAt\": \"2025-05-15T12:24:17.712Z\",\n    \"updatedAt\": \"2025-05-15T12:37:11.682Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/category"
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/category"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-bRpD9BId6H5vgHI7gyjby6wZOOQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:38:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"6f5ccc1f-035a-4982-9f86-96fe7f4dab83\",\n        \"title\": \"test222\",\n        \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n        \"createdAt\": \"2025-05-15T12:24:17.712Z\",\n        \"updatedAt\": \"2025-05-15T12:37:11.682Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3000/api/v1/category/6f5ccc1f-035a-4982-9f86-96fe7f4dab83"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-HiI2I7WeFZtw1Thq9TV1uyyw1RI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 12:38:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f5ccc1f-035a-4982-9f86-96fe7f4dab83\",\n    \"title\": \"test222\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"createdAt\": \"2025-05-15T12:24:17.712Z\",\n    \"updatedAt\": \"2025-05-15T12:37:11.682Z\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"test\",\r\n    \"description\": \"test222\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"deadLine\": \"2026-10-01T12:00:00Z\",\r\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/task"
+					},
+					"response": [
+						{
+							"name": "Create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"test\",\r\n    \"description\": \"test222\",\r\n    \"priority\": \"MEDIUM\",\r\n    \"deadLine\": \"2026-10-01T12:00:00Z\",\r\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/task"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "339"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"153-BfoGpeJiAvVCdlu2U3K6LsIlBi8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:00:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"666ca05f-5bfb-46ea-8ffd-247296be88db\",\n    \"title\": \"test\",\n    \"description\": \"test222\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"WAITING\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n    \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n    \"createdAt\": \"2025-05-15T13:00:09.543Z\",\n    \"updatedAt\": \"2025-05-15T13:00:09.543Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"test222ccc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"test222ccc\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-6fbWVXui2do5zFAAL4qYA8znEDw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:02:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"666ca05f-5bfb-46ea-8ffd-247296be88db\",\n    \"title\": \"test\",\n    \"description\": \"test222ccc\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"WAITING\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n    \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n    \"createdAt\": \"2025-05-15T13:00:09.543Z\",\n    \"updatedAt\": \"2025-05-15T13:02:49.134Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+					},
+					"response": [
+						{
+							"name": "show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "540"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21c-2Yw4R+ZWf5Yh59QqCBkGkoTZdw4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:08:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"666ca05f-5bfb-46ea-8ffd-247296be88db\",\n    \"title\": \"test\",\n    \"description\": \"test222ccc\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"WAITING\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n    \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n    \"createdAt\": \"2025-05-15T13:00:09.543Z\",\n    \"updatedAt\": \"2025-05-15T13:02:49.134Z\",\n    \"Category\": {\n        \"id\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n        \"title\": \"test\",\n        \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n        \"createdAt\": \"2025-05-15T12:46:26.943Z\",\n        \"updatedAt\": \"2025-05-15T12:46:26.943Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Index",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/api/v1/task"
+					},
+					"response": [
+						{
+							"name": "Index",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/api/v1/task"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "344"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"158-a4GDu6/kHnSfkLjgqpzvsmTncxA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:08:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"666ca05f-5bfb-46ea-8ffd-247296be88db\",\n        \"title\": \"test\",\n        \"description\": \"test222ccc\",\n        \"priority\": \"MEDIUM\",\n        \"status\": \"WAITING\",\n        \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n        \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n        \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n        \"createdAt\": \"2025-05-15T13:00:09.543Z\",\n        \"updatedAt\": \"2025-05-15T13:02:49.134Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjZWEyM2M4Yy1iMTdmLTQ4ODMtOGQwOS1kMmMyZWVhYTc4ODEiLCJuYmYiOjE3NDczMTE4NDEsImlhdCI6MTc0NzMxMTg0NiwiZXhwIjoxNzQ3MzE1NDQ2fQ._BYzuQ9WspTuLcVqc71t-ffiIeBIe54Niwp6pnWCqeY"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+					},
+					"response": [
+						{
+							"name": "Delete",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "localhost:3000/api/v1/task/666ca05f-5bfb-46ea-8ffd-247296be88db"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "342"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"156-6fbWVXui2do5zFAAL4qYA8znEDw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:09:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"666ca05f-5bfb-46ea-8ffd-247296be88db\",\n    \"title\": \"test\",\n    \"description\": \"test222ccc\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"WAITING\",\n    \"userId\": \"cea23c8c-b17f-4883-8d09-d2c2eeaa7881\",\n    \"categoryId\": \"e9fb6c75-ddce-4a07-9cd8-77ea522be947\",\n    \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n    \"createdAt\": \"2025-05-15T13:00:09.543Z\",\n    \"updatedAt\": \"2025-05-15T13:02:49.134Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI0MWNhM2Y3Yi0yMWZhLTRkYzktOWM5NS1iOWVjOGNmNTc4MTYiLCJuYmYiOjE3NDczMTU4NjIsImlhdCI6MTc0NzMxNTg2NywiZXhwIjoxNzQ3MzE5NDY3fQ.NNe47-uazZgygrksBdmYEYH-fHGGg2W5vj2kqpYwAwg"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"DONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:3000/api/v1/task/118b86ce-c8a0-4a2d-84dd-e12fdb1beeda/status"
+					},
+					"response": [
+						{
+							"name": "Update status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\": \"DONE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "localhost:3000/api/v1/task/118b86ce-c8a0-4a2d-84dd-e12fdb1beeda/status"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e-5lrSMgSlRQZ6O/Q+4b6FdrXwmMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 15 May 2025 13:32:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"118b86ce-c8a0-4a2d-84dd-e12fdb1beeda\",\n    \"title\": \"test\",\n    \"description\": \"test222\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"DONE\",\n    \"userId\": \"41ca3f7b-21fa-4dc9-9c95-b9ec8cf57816\",\n    \"categoryId\": null,\n    \"deadLine\": \"2026-10-01T12:00:00.000Z\",\n    \"createdAt\": \"2025-05-15T13:32:18.671Z\",\n    \"updatedAt\": \"2025-05-15T13:32:53.607Z\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
