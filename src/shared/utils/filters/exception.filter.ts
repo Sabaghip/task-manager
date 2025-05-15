@@ -20,7 +20,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
     const res: Response = context.getResponse<Response>()
 
     let type: string = "INTERNAL"
-    let message: string = "خطا داخلی سرور"
+    let message: string = "Internal server error."
     let status: number = 500
     let cause: any
 
