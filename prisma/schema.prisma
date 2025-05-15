@@ -6,3 +6,62 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+model User {
+  id                     String    @id @default(uuid()) @db.Uuid
+  email                  String    @unique
+  fullName               String
+  mobile                 String?   @unique
+  password               String
+  number                 Int?      @default(autoincrement()) @db.Integer
+
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @default(now()) @updatedAt
+
+  Tasks             Task[]
+  Categories        Category[]
+
+  @@index([email])
+  @@index([mobile])
+  @@index([number])
+  @@map("users")
+}
+
+model Task {
+  id               String    @id @default(uuid()) @db.Uuid
+  title            String
+  description      String
+  priority         String
+  status           String    @default("PENDING_OWNERSHIP")
+  userId           String    @db.Uuid
+  categoryId       String?   @db.Uuid
+  deadLine         DateTime?
+
+  User            User          @relation(fields: [userId], references: [id])
+  Category        Category?      @relation(fields: [categoryId], references: [id])
+
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@index([userId])
+  @@map("tasks")
+}
+
+model Category {
+  id               String    @id @default(uuid()) @db.Uuid
+  title            String
+  userId           String    @db.Uuid
+
+  User            User          @relation(fields: [userId], references: [id])
+
+  Tasks           Task[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @default(now()) @updatedAt
+
+  @@index([userId])
+  @@map("categories")
+}
+
