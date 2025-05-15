@@ -5,6 +5,7 @@ import { Category, Task } from '@prisma/client'
 import { CreateTaskDto, UpdateTaskDto } from './dto/create.dto'
 import { IndexTaskDto } from './dto/index.dto'
 import { CategoryService } from '../category/category.service'
+import { CategoryBadReqMessage } from '../category/enum/categoryBadReqMessage.enum'
 
 @Injectable()
 export class TaskService {
@@ -14,7 +15,10 @@ export class TaskService {
   ) { }
   async create(userId: string, createTaskDto: CreateTaskDto): Promise<Task> {
     if (createTaskDto.categoryId) {
-      await this.categoryService.findOne(createTaskDto.categoryId)
+      const category = await this.categoryService.findOne(createTaskDto.categoryId)
+      if (category.userId !== userId) {
+        throw new BadRequestException(CategoryBadReqMessage.CANT_ACCESS)
+      }
     }
     return await this.taskRepo.store({ userId, ...createTaskDto })
   }
