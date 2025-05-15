@@ -1,0 +1,52 @@
+# Node modules
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.*.local
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Build output
+dist
+build
+.cache
+
+# Temporary files and folders
+tmp
+temp
+*.tmp
+*.temp
+
+# Test-related files
+coverage
+*.spec.ts
+*.test.ts
+jest.config.js
+tests
+mocks
+
+# IDE/editor folders and files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker-related files
+Dockerfile
+docker-compose.yml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+package-lock.json
