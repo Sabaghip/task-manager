@@ -12,7 +12,8 @@ import { NotificationService } from '../notification/notification.service'
 export class TaskService {
   constructor(
     private readonly taskRepo: TaskRepo,
-    private readonly categoryService: CategoryService
+    private readonly categoryService: CategoryService,
+    private readonly notificationService: NotificationService
   ) { }
   async create(userId: string, createTaskDto: CreateTaskDto): Promise<Task> {
     if (createTaskDto.categoryId) {
@@ -57,9 +58,12 @@ export class TaskService {
   }
 
   async update(id: string, updateTaskDto: UpdateTaskDto): Promise<Task> {
-    await this.findOne(id)
+    const task = await this.findOne(id)
     if (updateTaskDto.categoryId) {
       await this.categoryService.findOne(updateTaskDto.categoryId)
+    }
+    if (updateTaskDto.status) {
+      await this.notificationService.notifyUser(task.userId, `Task ${task.title} status changed to ${updateTaskDto.status}`)
     }
     return await this.taskRepo.update(id, updateTaskDto)
   }
@@ -68,6 +72,9 @@ export class TaskService {
     const task = await this.findOne(id)
     if (task.userId != userId) {
       throw new BadRequestException(TaskBadReqMessage.CANT_ACCESS)
+    }
+    if (updateTaskDto.status) {
+      await this.notificationService.notifyUser(task.userId, `Task ${task.title} status changed to ${updateTaskDto.status}`)
     }
     return await this.taskRepo.update(id, updateTaskDto)
   }

@@ -1,7 +1,7 @@
 import { PaginationProvider } from '../prisma/pagination.provider'
 import { Injectable } from '@nestjs/common'
 import { PrismaService } from '../prisma/prisma.service'
-import { Category, Task } from '@prisma/client'
+import { Category, Task, TaskStatus } from '@prisma/client'
 import { CreateTaskType, UpdateTaskType } from './type/task.type'
 
 @Injectable()
@@ -24,6 +24,17 @@ export class TaskRepo {
       take: page ? this.pagination.size : undefined,
       skip: page ? this.pagination.skip(page) : undefined
     }))
+  }
+
+  async findManyExpiredTasks(): Promise<Task[]> {
+    return await this.prisma.task.findMany({
+      where: {
+        status: TaskStatus.WAITING,
+        deadLine: {
+          lt: new Date()
+        }
+      },
+    })
   }
 
   async findOne(id: string): Promise<Task & { Category: Category }> {
