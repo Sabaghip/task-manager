@@ -31,8 +31,8 @@ export class UserService {
     return await this.userRepo.store({ ...createUserDto, password: hashedPass })
   }
 
-  async findAll(filters: IndexUserFilter): Promise<User[]> {
-    return await this.userRepo.findMany(filters)
+  async index(filters: IndexUserFilter, page?: number): Promise<User[]> {
+    return await this.userRepo.findMany(filters, page)
   }
 
   async findOne(id: string): Promise<User> {

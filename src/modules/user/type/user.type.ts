@@ -1,6 +1,6 @@
 import { User } from "@prisma/client";
 
-export type CreateUserType = Omit<User, "createdAt" | "updatedAt" | "id" | "number">
+export type CreateUserType = Omit<User, "createdAt" | "updatedAt" | "id" | "number" | "isAdmin">
 
 export type UpdateUserType = Omit<User,
     "createdAt"
@@ -10,7 +10,8 @@ export type UpdateUserType = Omit<User,
     | "email"
     | "mobile"
     | "password"
-    | "fullName"> & {
+    | "fullName"
+    | "isAdmin"> & {
         email?: string,
         mobile?: string,
         password?: string,
