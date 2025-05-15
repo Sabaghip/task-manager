@@ -39,8 +39,8 @@ model Task {
   categoryId       String?   @db.Uuid
   deadLine         DateTime?
 
-  User            User          @relation(fields: [userId], references: [id])
-  Category        Category?      @relation(fields: [categoryId], references: [id])
+  User            User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  Category        Category?     @relation(fields: [categoryId], references: [id], onDelete: SetNull)
 
 
   createdAt DateTime @default(now())
@@ -55,12 +55,12 @@ model Category {
   title            String
   userId           String    @db.Uuid
 
-  User            User          @relation(fields: [userId], references: [id])
+  User            User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   Tasks           Task[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @default(now()) @updatedAt
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @default(now()) @updatedAt
 
   @@index([userId])
   @@map("categories")

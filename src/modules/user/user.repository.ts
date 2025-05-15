@@ -21,8 +21,8 @@ export class UserRepo {
       where: {
         ...filters
       },
-      take: page ? 10 : undefined,
-      skip: page ? (page - 1) * 10 : undefined
+      take: page ? this.pagination.size : undefined,
+      skip: page ? this.pagination.skip(page) : undefined
     }))
   }
 
