@@ -33,6 +33,12 @@ export class UpdateTaskDto {
   categoryId?: string
 }
 
+export class UpdateTaskStatusDto {
+  @IsEnum(TaskStatus)
+  @IsNotEmpty()
+  status: TaskStatus
+}
+
 export class CreateTaskDto {
   @IsString()
   @IsNotEmpty()

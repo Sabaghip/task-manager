@@ -3,7 +3,7 @@ import { Controller, Body, Put, UseGuards, Get, Delete, Param, ParseUUIDPipe, Qu
 import { JwtPayload } from '../auth/type/jwt.payload'
 import { TaskService } from './task.service'
 import { User } from '../user/decorator/ctx-user.decorator'
-import { CreateTaskDto, UpdateTaskDto } from './dto/create.dto'
+import { CreateTaskDto, UpdateTaskDto, UpdateTaskStatusDto } from './dto/create.dto'
 import { IndexTaskDto } from './dto/index.dto'
 
 @UseGuards(AccessTokenGuard)
@@ -16,6 +16,14 @@ export class TaskController {
     @Param("id", new ParseUUIDPipe) taskId: string,
     @Body() updateTaskDto: UpdateTaskDto) {
     return this.taskService.updateByUser(user.sub, taskId, updateTaskDto)
+  }
+
+  @Put(':id')
+  changeStatus(
+    @User() user: JwtPayload,
+    @Param("id", new ParseUUIDPipe) taskId: string,
+    @Body() updateTaskStatusDto: UpdateTaskStatusDto) {
+    return this.taskService.updateByUser(user.sub, taskId, { status: updateTaskStatusDto.status })
   }
 
   @Get('')
