@@ -34,7 +34,7 @@ model Task {
   title            String
   description      String
   priority         String
-  status           String    @default("PENDING_OWNERSHIP")
+  status           TaskStatus @default(WAITING)
   userId           String    @db.Uuid
   categoryId       String?   @db.Uuid
   deadLine         DateTime?
@@ -66,3 +66,14 @@ model Category {
   @@map("categories")
 }
 
+enum TaskStatus {
+  WAITING
+  DONE
+  CANCELED
+}
+
+enum TaskPriority {
+  HIGH
+  MEDIUM
+  LOW
+}

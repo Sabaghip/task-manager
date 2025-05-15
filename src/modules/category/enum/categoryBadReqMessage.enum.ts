@@ -1,5 +1,5 @@
 
 export enum CategoryBadReqMessage {
   NOT_FOUND = "Category not found.",
-  CANT_ACCESS = "Cnat access this category"
+  CANT_ACCESS = "Cant access this category"
 }
