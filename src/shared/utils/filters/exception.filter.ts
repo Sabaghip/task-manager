@@ -32,6 +32,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
       cause = response['cause']
     }
 
+    console.log("ERROR ::: ", exception)
+
     res.status(status).json({
       status,
       type,

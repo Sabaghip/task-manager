@@ -1,5 +1,5 @@
 import { TaskPriority, TaskStatus } from "@prisma/client"
-import { IsDate, IsEnum, IsNotEmpty, IsOptional, IsString } from "class-validator"
+import { IsDate, IsDateString, IsEnum, IsNotEmpty, IsOptional, IsString } from "class-validator"
 
 export class UpdateTaskDto {
   @IsString()
@@ -51,7 +51,7 @@ export class CreateTaskDto {
   @IsOptional()
   status?: TaskStatus
 
-  @IsDate()
+  @IsDateString()
   @IsNotEmpty()
   deadLine: string
 

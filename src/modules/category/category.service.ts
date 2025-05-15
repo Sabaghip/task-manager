@@ -11,7 +11,7 @@ export class CategoryService {
     private readonly categoryRepo: CategoryRepo
   ) { }
   async create(userId: string, createCategoryDto: CreateCategoryDto): Promise<Category> {
-    return await this.categoryRepo.store({ userId, ...createCategoryDto })
+    return await this.categoryRepo.store({ ...createCategoryDto, userId })
   }
 
   async removeByUser(userId: string, categoryId: string): Promise<Category> {

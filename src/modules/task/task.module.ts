@@ -3,6 +3,7 @@ import { PrismaModule } from '../prisma/prisma.module';
 import { TaskService } from './task.service';
 import { TaskController } from './task.controller';
 import { TaskRepo } from './task.repository';
+import { CategoryModule } from '../category/category.module';
 
 @Module({
   imports: [PrismaModule, CategoryModule],
@@ -10,4 +11,4 @@ import { TaskRepo } from './task.repository';
   exports: [TaskService],
   controllers: [TaskController]
 })
-export class CategoryModule { }
+export class TaskModule { }

@@ -1,14 +1,12 @@
 import { AccessTokenGuard } from '../auth/guards/access-token.guard'
 import { Controller, Body, Put, UseGuards, Get, Delete, Param, ParseUUIDPipe, Query, Post } from '@nestjs/common'
 import { UserService } from './user.service'
-import { UpdateUserbyAdminDto, UpdateUserDto } from './dto/update-user.dto'
+import { UpdateUserbyAdminDto } from './dto/update-user.dto'
 import { adminGuard } from '../auth/guards/admin.guard'
 import { IndexUserFilter } from './dto/indexUser.dto'
-import { CreateUserType } from './type/user.type'
 import { SignUpDto } from '../auth/dto/create-auth.dto'
 
-@UseGuards(AccessTokenGuard)
-@UseGuards(adminGuard)
+@UseGuards(AccessTokenGuard, adminGuard)
 @Controller('admin/user')
 export class UserAdminController {
   constructor(private readonly userService: UserService) { }

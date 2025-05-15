@@ -28,7 +28,11 @@ export class UserService {
 
     const hashedPass = await this.hashService.md5er(password)
 
-    return await this.userRepo.store({ ...createUserDto, password: hashedPass })
+    const user = await this.userRepo.store({ ...createUserDto, password: hashedPass })
+    delete user.password
+    delete user.isAdmin
+
+    return user
   }
 
   async index(filters: IndexUserFilter, page?: number): Promise<User[]> {
@@ -46,6 +50,7 @@ export class UserService {
   async getProfile(id: string): Promise<User> {
     const user = await this.findOne(id)
     delete user.password
+    delete user.isAdmin
     return user
   }
 
@@ -67,7 +72,11 @@ export class UserService {
     if (updateUserDto.password) {
       updateUserDto.password = await this.hashService.md5er(updateUserDto.password)
     }
-    return await this.userRepo.update(id, updateUserDto)
+    const user = await this.userRepo.update(id, updateUserDto)
+    delete user.password
+    delete user.isAdmin
+
+    return user
   }
 
   async updateByUser(id: User['id'], updateUserDto: UpdateUserDto): Promise<User> {
@@ -80,11 +89,16 @@ export class UserService {
     const { lastPassword, ...rest } = updateUserDto
     const updatedUser = await this.update(id, rest)
     delete updateUserDto.password
+    delete updatedUser.password
+    delete updatedUser.isAdmin
     return updatedUser
   }
 
   async remove(id: string): Promise<User> {
     await this.findOne(id)
-    return await this.userRepo.delete(id)
+    const user = await this.userRepo.delete(id)
+    delete user.password
+    delete user.isAdmin
+    return user
   }
 }
