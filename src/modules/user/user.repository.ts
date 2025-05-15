@@ -30,7 +30,7 @@ export class UserRepo {
     return await this.prisma.user.findUnique({ where: { id } })
   }
 
-  async findOneWhere(filters: Partial<User>): Promise<UserDetails | null> {
+  async findOneWhere(filters: Partial<User>): Promise<User | null> {
     const { email, ...otherFilters } = filters || {};
 
     const user = await this.prisma.user.findFirst({

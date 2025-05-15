@@ -49,7 +49,7 @@ export class UserService {
     return user
   }
 
-  async findOnWhere(filter: Partial<User>): Promise<UserDetails | null> {
+  async findOnWhere(filter: Partial<User>): Promise<User | null> {
     return await this.userRepo.findOneWhere(filter)
   }
 

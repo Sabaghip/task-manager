@@ -28,6 +28,8 @@ export class AuthService {
       throw new BadRequestException(AuthMessages.WRONG_CREDENTIALS)
     }
     const payload = this._generatePayload(user.id)
+    delete user.password
+    delete user.isAdmin
     return {
       ...user,
       accessToken: this.accessService.createAccessToken(payload)
@@ -38,6 +40,7 @@ export class AuthService {
     const user = await this.userService.create(signupDto)
     const payload = this._generatePayload(user.id)
     delete user.password
+    delete user.isAdmin
     return {
       ...user,
       accessToken: this.accessService.createAccessToken(payload)
