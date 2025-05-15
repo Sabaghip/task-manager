@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config'
 import { ValidationPipe } from '@nestjs/common';
 import { AppModule } from './modules/app.module';
 import { IEnvVars } from './config/config.interface';
+import { HttpExceptionFilter } from './shared/utils/filters/exception.filter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {});
@@ -14,7 +15,7 @@ async function bootstrap() {
   })
 
   app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }))
-
+  app.useGlobalFilters(new HttpExceptionFilter())
 
   app.setGlobalPrefix('api/v1')
 
